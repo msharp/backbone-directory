@@ -5,17 +5,23 @@
  look for employees by name, view the details of an employee, and navigate up and down the Org Chart by clicking the
  employee’s manager or any of his/her direct reports.
 
+ This is a forked version of ccoenraets/backbone-directory with a Sinatra data service 
+
 ## Set Up: ##
 
-1. Create a MySQL database name "directory".
-2. Execute directory.sql to create and populate the "employee" table:
+1. Run bundle install to get the gemset.
+2. Create a MySQL database name "backbone_directory".
+3. Execute ./bootstrap.rb to create and populate the "employee" model
 
-	mysql directory -uroot < directory.sql
+## Service: ##
 
-## Services: ##
+The front-end backbone application uses a Ruby/Sinatra data service.
+To run the app:
 
-The application is available with a PHP or Java services:
+    ruby ./directory.rb
 
-- The PHP services are available in the api directory of this repository. The RESTful services are implemented in PHP using the [Slim framework](http://www.slimframework.com/) (also included in the api directory).
-- The Java back-end will be available soon.
+Then point your internet device at:
+
+    http://localhost:4567
+
 

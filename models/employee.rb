@@ -20,8 +20,17 @@ class Employee
   property :twitter_id, String
   property :blog_url, String
 
-  def to_hash 
-    self.attributes
+  # a couple of hacks here to serve the manager 
+  # info that is needed by the backbone templates
+  def to_hash(include_manager=true)
+    r = self.attributes
+    r[:manager] = manager.to_hash(false) if include_manager
+    r
+  end
+
+  def manager
+    manager_id > 0 ? Employee.first(:id => manager_id) : Employee.new(:id => 0, :manager_id => 0)
   end
 
 end
+

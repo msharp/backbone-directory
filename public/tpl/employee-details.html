@@ -1,5 +1,5 @@
-<p><img src="pics/<%= firstName %>_<%= lastName %>.jpg" width="160" height="160"/></p>
-<h1><%= firstName %> <%= lastName %></h1>
+<p><img src="pics/<%= first_name %>_<%= last_name %>.jpg" width="160" height="160"/></p>
+<h1><%= first_name %> <%= last_name %></h1>
 <h3><%= title %></h3>
 
 <br>
@@ -8,15 +8,15 @@
         <table class="table table-striped">
             <tr>
                 <td><h6>Manager:</h6></td>
-                <td><i class="icon-user"></i> <a href='#employees/<%= managerId %>'><%= managerFirstName %> <%= managerLastName %></a></td>
+                <td><i class="icon-user"></i> <a href='#employees/<%= manager_id %>'><%= manager.first_name %> <%= manager.last_name %></a></td>
             </tr>
             <tr>
                 <td><h6>Office Phone:</h6></td>
-                <td><i class="icon-home"></i> <%= officePhone %></td>
+                <td><i class="icon-home"></i> <%= office_phone %></td>
             </tr>
             <tr>
                 <td><h6>Cell Phone:</h6></td>
-                <td><i class="icon-headphones"></i> <%= cellPhone %></td>
+                <td><i class="icon-headphones"></i> <%= cell_phone %></td>
             </tr>
             <tr>
                 <td><h6>Email:</h6></td>
@@ -24,7 +24,7 @@
             </tr>
             <tr>
                 <td><h6>Twitter:</h6></td>
-                <td><i class="icon-retweet"></i> <a href=""><%= twitterId %></a></td>
+                <td><i class="icon-retweet"></i> <a href=""><%= twitter_id %></a></td>
             </tr>
         </table>
 
